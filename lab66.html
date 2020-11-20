@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+             var intID;
+          function draw(){
+              var canvas = document.getElementById('canvas');
+              var ctx = canvas.getContext('2d');
+              var x = 100 + Math.floor(200*Math.random());
+              var y = 100 + Math.floor(200*Math.random());
+              var colorR = Math.floor(255*Math.random());
+              var colorG = Math.floor(255*Math.random());
+              var colorB = Math.floor(255*Math.random());
+
+              if (document.getElementById("R").checked) {
+                  colorR = 0;
+            }else if (document.getElementById("G").checked) {
+                  colorG = 0;
+              }else if (document.getElementById("B").checked) {
+                  colorB = 0;}
+              ctx.fillStyle = 'rgb('+colorR+','+colorG+','+colorB+')';
+              ctx.fillRect(x,y,50,50);
+          }
+          var a =Math.floor((document.getElementById("speed").value)*10);
+        </script>
+    </head> 
+    <body>
+        Выберите неиспользуемый цвет:<br>
+        <input type="radio" name="category" id="R"/>R<br>
+        <input type="radio" name="category" id="G"/>G<br>
+        <input type="radio" name="category" id="B"/>B<br>
+        Введите скорость: <input type="text" id="speed"/><br>
+        <input type="button" value="Start" onclick="intID=setInterval('draw()', 10)"/>
+        <input type="button" value="Stop" onclick="clearInterval(intID)">
+        <canvas id="canvas" width="500" height="500"></canvas>
+
+    </body>
+</html> 

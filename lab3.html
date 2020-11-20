@@ -1,0 +1,28 @@
+﻿<html>
+<head>
+<script type="text/javascript">
+function showTransport() {
+if (document.getElementById("A").checked) {
+alert("Мотоциклы");
+} else if (document.getElementById("B").checked) {
+alert("Легковые автомобили");
+} else if (document.getElementById("C").checked) {
+alert("Грузовые автомобили");
+} else if (document.getElementById("D").checked) {
+alert("Автобусы");
+} else if (document.getElementById("M").checked) {
+alert("Мопеды");
+} }
+</script>
+</head>
+<body>
+Выберите категорию:<br>
+<input type="radio" name="category" id="A"/>A<br>
+<input type="radio" name="category" id="B"/>B<br>
+<input type="radio" name="category" id="C"/>C<br>
+<input type="radio" name="category" id="D"/>D<br>
+<input type="radio" name="category" id="M"/>M<br>
+<input type="button" value="Показать транспортные средства"
+onclick="showTransport()"/>
+</body>
+</html>
